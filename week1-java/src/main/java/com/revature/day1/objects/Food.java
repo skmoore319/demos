@@ -1,6 +1,11 @@
 package com.revature.day1.objects;
 
 public class Food {
+	static {
+		System.out.println("this will run once at the time the class is loaded");
+	}
+	
+	public static int numberOfFoodCreated = 0;
 
 	private double volume; // in in^3
 
@@ -9,6 +14,10 @@ public class Food {
 	private double price;
 
 	private int rating;
+	
+	{
+		System.out.println("this will run everytime an object of this class is instantiated");
+	}
 
 	public Food() {
 		this(24, "Chicken", 13, 2);
@@ -20,6 +29,7 @@ public class Food {
 		this.name = name;
 		this.price = price;
 		this.rating = rating;
+		Food.numberOfFoodCreated += 1;
 	}
 
 	public double getVolume() {
@@ -34,7 +44,7 @@ public class Food {
 		return name;
 	}
 
-	public void setName(String name) {
+	public void setName(String name) { 
 		this.name = name;
 	}
 
