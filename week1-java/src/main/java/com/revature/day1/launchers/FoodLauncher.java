@@ -1,7 +1,5 @@
 package com.revature.day1.launchers;
 
-import java.util.regex.Pattern;
-
 import com.revature.day1.objects.Food;
 
 public class FoodLauncher {
@@ -14,5 +12,6 @@ public class FoodLauncher {
 		System.out.println(cheesecake.getName());
 		System.out.println(pizza.getName());
 		System.out.println(pizza);
+
 	}
 }

@@ -1,0 +1,26 @@
+2018-05-18 14:50:09 TRACE LoggingLauncher:9 - This is a trace log
+2018-05-18 14:50:09 DEBUG LoggingLauncher:10 - This is a debug log
+2018-05-18 14:50:09 INFO  LoggingLauncher:11 - This is an info log
+2018-05-18 14:50:09 WARN  LoggingLauncher:12 - This is a warn log
+2018-05-18 14:50:09 ERROR LoggingLauncher:13 - This is an error log
+2018-05-18 14:50:09 FATAL LoggingLauncher:14 - This is a fatal log
+2018-05-18 14:51:05 TRACE LoggingLauncher:9 - This is a trace log
+2018-05-18 14:51:05 DEBUG LoggingLauncher:10 - This is a debug log
+2018-05-18 14:51:05 INFO  LoggingLauncher:11 - This is an info log
+2018-05-18 14:51:05 WARN  LoggingLauncher:12 - This is a warn log
+2018-05-18 14:51:05 ERROR LoggingLauncher:13 - This is an error log
+2018-05-18 14:51:05 FATAL LoggingLauncher:14 - This is a fatal log
+2018-05-18 14:51:35 TRACE LoggingLauncher:9 - This is a trace log
+2018-05-18 14:51:35 DEBUG LoggingLauncher:10 - This is a debug log
+2018-05-18 14:51:35 INFO  LoggingLauncher:11 - This is an info log
+2018-05-18 14:51:35 WARN  LoggingLauncher:12 - This is a warn log
+2018-05-18 14:51:35 ERROR LoggingLauncher:13 - This is an error log
+2018-05-18 14:51:35 FATAL LoggingLauncher:14 - This is a fatal log
+2018-05-18 14:51:56 TRACE LoggingLauncher:9 - This is a trace log
+2018-05-18 14:51:56 DEBUG LoggingLauncher:10 - This is a debug log
+2018-05-18 14:51:56 INFO  LoggingLauncher:11 - This is an info log
+2018-05-18 14:51:56 WARN  LoggingLauncher:12 - This is a warn log
+2018-05-18 14:51:56 ERROR LoggingLauncher:13 - This is an error log
+2018-05-18 14:51:56 FATAL LoggingLauncher:14 - This is a fatal log
+2018-05-18 14:58:11 TRACE GeodeSerializer:20 - populating a new list with old geodes
+2018-05-18 14:58:11 TRACE GeodeSerializer:26 - adding new geode to the updated list

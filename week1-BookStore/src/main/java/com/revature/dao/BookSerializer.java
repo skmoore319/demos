@@ -24,12 +24,10 @@ public class BookSerializer implements BookDao {
 		currentBooks.add(b);
 
 		try (ObjectOutputStream outStream = new ObjectOutputStream(new FileOutputStream(FILE_LOCATION))) {
-			
+
 			outStream.writeObject(currentBooks); // serialize the list to the file
 			return true;
-		
-		
-		
+
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -62,12 +60,9 @@ public class BookSerializer implements BookDao {
 	@Override
 	public List<Book> findAll() {
 		try (ObjectInputStream inStream = new ObjectInputStream(new FileInputStream(FILE_LOCATION))) {
-			
-			
+
 			return (List<Book>) inStream.readObject();
-		
-		
-		
+
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
