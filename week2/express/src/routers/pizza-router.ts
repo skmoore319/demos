@@ -30,6 +30,13 @@ pizzaRouter.get('/name/:name', (req: Request, resp: Response) => {
   resp.end();
 });
 
+pizzaRouter.get('/size/:size', (req: Request, resp: Response) => {
+  const size = req.params.size;
+  console.log(`retreiving pizza with size ${size}`);
+  const filtered = pizza.filter((p) => p.size === size);
+  resp.json(filtered);
+});
+
 pizzaRouter.post('', (req: Request, resp: Response) => {
   console.log(`adding pizza: ${JSON.stringify(req.body)}
   to pizzas`);
