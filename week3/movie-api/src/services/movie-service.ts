@@ -11,3 +11,7 @@ export function findByYearAndTitle(year: number, title: string) {
 export function update(movie) {
   return movieDao.update(movie);
 }
+
+export function save(movie) {
+  return movieDao.saveMovie(movie);
+}

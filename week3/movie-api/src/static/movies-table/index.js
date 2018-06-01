@@ -1,7 +1,13 @@
 function retreiveMovies() {
   const year = document.getElementById('year-input').value;
   fetch('http://localhost:3000/movies/year/' + year, {credentials: 'include'})
-    .then(resp => resp.json())
+    .then(resp => {
+      console.log(resp.status)
+      if(resp.status === 401 || resp.status === 403) {
+        return;
+      }
+      return resp.json();
+    })
     .then((movies) => {
 
       // clear table
@@ -13,6 +19,8 @@ function retreiveMovies() {
     })
     .catch(err => {
       console.log(err);
+      const body = document.getElementById('movie-table-body');
+      body.innerText = 'Unable to retreive data';
     });
 }
 
