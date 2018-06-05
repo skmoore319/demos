@@ -1,10 +1,10 @@
 import aws from 'aws-sdk';
-import {ConfigurationOptions} from 'aws-sdk/lib/config';
+import { ConfigurationOptions } from 'aws-sdk/lib/config';
 const awsConfig: ConfigurationOptions = {
   region: 'us-west-2',
   accessKeyId: process.env.AWS_ACCESS_KEY,
   secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
-}
+};
 
 aws.config.update(awsConfig);
 
@@ -28,7 +28,7 @@ export function createMovieTable() {
       WriteCapacityUnits: 2
     }
   }, (err, data) => {
-    if(err) {
+    if (err) {
       console.log(`Unable to creat table: \n ${JSON.stringify(err, undefined, 2)}`);
     } else {
       console.log(`Created table: \n ${JSON.stringify(data, undefined, 2)}`);
@@ -54,7 +54,7 @@ export function findAllByYear(year: number): Promise<any> {
       ':yyyy': year
     },
     // ReturnConsumedCapacity: 'TOTAL' // not needed but if you want to see this info it is there
-    
+
   }).promise();
 }
 

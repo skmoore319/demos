@@ -3,7 +3,7 @@ import express from 'express';
 export const userRouter = express.Router();
 
 /**
- * This route expects an object with a usename and password. If the username and password is recognized it will set a role attribute on 
+ * This route expects an object with a usename and password. If the username and password is recognized it will set a role attribute on
  * the current session so that the role can be viewed upon future requests.
  */
 userRouter.post('/login', (req, resp, next) => {

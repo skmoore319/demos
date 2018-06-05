@@ -38,10 +38,10 @@ app.use(bodyParser.json());
 
 // allow cross origins
 app.use((req, resp, next) => {
-  resp.header("Access-Control-Allow-Origin", "*");
-  resp.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  resp.header('Access-Control-Allow-Origin', '*');
+  resp.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   next();
-})
+});
 
 /*******************************************************************************
  * ROUTERS
