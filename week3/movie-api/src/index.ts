@@ -8,7 +8,7 @@ import { userRouter } from './routers/user-router';
 
 const app = express();
 
-const port = process.env.PORT || 3000;
+const port = 3001;
 app.set('port', port);
 
 
@@ -38,8 +38,9 @@ app.use(bodyParser.json());
 
 // allow cross origins
 app.use((req, resp, next) => {
-  resp.header('Access-Control-Allow-Origin', '*');
+  resp.header('Access-Control-Allow-Origin', 'http://localhost:9001');
   resp.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  resp.header('Access-Control-Allow-Credentials', 'true');
   next();
 });
 

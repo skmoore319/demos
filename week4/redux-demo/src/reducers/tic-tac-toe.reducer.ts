@@ -12,17 +12,17 @@ const initialState: ITicTacToeState = {
   winner: 0
 }
 
-export const ticTacToeReducer = (state = initialState, action: any) => {
+export const ticTacToeReducer = (ticTacToeState = initialState, action: any) => {
   switch (action.type) {
     case ticTacToeTypes.MAKE_MOVE:
       return {
-        ...state,
+        ...ticTacToeState,
         game: action.payload.game,
         playerTurn: action.payload.playerTurn
       };
     case ticTacToeTypes.END_GAME:
       return {
-        ...state,
+        ...ticTacToeState,
         message: action.payload.message,
         winner: action.payload.winner
       };
@@ -30,5 +30,5 @@ export const ticTacToeReducer = (state = initialState, action: any) => {
       return action.payload;
   }
 
-  return state;
+  return ticTacToeState;
 };

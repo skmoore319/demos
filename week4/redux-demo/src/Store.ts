@@ -3,10 +3,15 @@ import reduxThunk from 'redux-thunk';
 import logger from 'redux-logger'
 import { state } from './reducers';
 
+const a: any = window;
+const composeEnhancers = a.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const enhancer = composeEnhancers(
+  applyMiddleware(reduxThunk, logger),
+  // other store enhancers if any
+);
+
 export const store: Store<any> = createStore(
   state,
-  compose(applyMiddleware(reduxThunk, logger),
-    (window as any).__REDUX_DEVTOOLS_EXTENSION__ &&
-    (window as any).__REDUX_DEVTOOLS_EXTENSION__()
-  )
+  enhancer
 );

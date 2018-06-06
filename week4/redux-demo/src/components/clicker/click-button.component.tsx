@@ -15,6 +15,11 @@ export class ClickerButtonComponent extends React.Component<any, any> {
           this.props.clicks >= 15 &&
             <button className="btn btn-primary" onClick={() => this.props.increment(5)}>Big Click!</button>
         }
+
+        {
+          this.props.clicks >= 50 &&
+            <button className="btn btn-primary" onClick={() => this.props.buyAuto(1)}>Buy 1 Auto Click</button>
+        }
       </div>
     );
   }

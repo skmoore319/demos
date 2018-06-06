@@ -1,3 +1,3 @@
 export const clickerTypes = {
-  INCREMENT: 'INCREMENT'
+  INCREMENT: 'INCREMENT',
 }

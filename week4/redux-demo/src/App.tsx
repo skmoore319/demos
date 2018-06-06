@@ -10,6 +10,7 @@ import { TicTacToeContainer } from './components/tic-tac-toe/tic-tac-toe.contain
 import { Provider } from 'react-redux';
 import { store } from './Store';
 import { ClickerContainer } from './components/clicker/clicker.container';
+import { SignInContainer } from './components/sign-in/sign-in.container';
 
 class App extends React.Component<any, any> {
 
@@ -24,6 +25,7 @@ class App extends React.Component<any, any> {
               <Route path="/second" component={SecondComponent} />
               <Route path="/clicker" component={ClickerContainer} />
               <Route path="/tic-tac-toe" component={TicTacToeContainer} />
+              <Route path="/sign-in" component={SignInContainer} />
               <Route component={FirstComponent} />
             </Switch>
           </div>
