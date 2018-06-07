@@ -15,7 +15,7 @@ export const updateMovies = (year: number) => (dispatch: any) => {
     .then(resp => {
       console.log(resp.status)
       if(resp.status === 401 || resp.status === 403) {
-        return;
+        throw new Error('Invalid permissions');
       }
       return resp.json();
     })

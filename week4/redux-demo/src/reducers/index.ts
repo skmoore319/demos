@@ -4,6 +4,7 @@ import { clickerReducer } from "./clicker.reducer";
 import { signInReducer } from "./sign-in.reducer";
 import { Movie } from "../model/Movie";
 import { movieTableReducer } from "./movie-table.reducer";
+import { chuckNorrisReducer } from "./chuck-norris.reducer";
 
 export interface ISignIn {
   username: string,
@@ -18,12 +19,17 @@ export interface ITicTacToeState {
   winner: number
 }
 
+export interface IChuckNorrisState {
+  joke: string;
+}
+
 export interface IMovieTable {
   movies: Movie[],
-  year: number
+  year: number,
 }
 
 export interface IState {
+  chuckNorris: IChuckNorrisState,
   clicker: {
     clicks: number
   },
@@ -33,6 +39,7 @@ export interface IState {
 };
 
 export const state = combineReducers<IState>({
+  chuckNorris: chuckNorrisReducer,
   clicker: clickerReducer,
   movieTable: movieTableReducer,
   signIn: signInReducer,

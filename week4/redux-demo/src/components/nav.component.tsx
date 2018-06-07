@@ -37,7 +37,11 @@ export const NavComponent: React.StatelessComponent<{}> = () => {
                 <div className="dropdown-item"><Link to="/movies" className="unset-anchor nav-link active">Movies</Link></div>
                 <div className="dropdown-item"><Link to="/clicker" className="unset-anchor nav-link active">Clicker Game</Link></div>
                 <div className="dropdown-item"><Link to="/tic-tac-toe" className="unset-anchor nav-link active">Tic Tac Toe Game</Link></div>
+                <div className="dropdown-item"><Link to="/chuck-norris" className="unset-anchor nav-link active">Chuck Norris Jokes</Link></div>
               </div>
+            </li>
+            <li className="nav-item active">
+              <Link to="/nested" className="unset-anchor nav-link">Nested</Link>
             </li>
           </ul>
         </div>

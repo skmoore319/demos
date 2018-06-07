@@ -14,7 +14,11 @@ export class ClickerComponent extends React.Component<any, any> {
     return (
       <div>
         <ClickerDisplayComponent clicks={this.props.clicks} />
-        <ClickerButtonComponent clicks={this.props.clicks} buyAuto={this.props.buyAuto} increment={this.props.increment} />
+        <ClickerButtonComponent 
+          clicks={this.props.clicks} 
+          buyAuto={this.props.buyAuto} 
+          increment={this.props.increment}
+          buyNewJoke={this.props.buyNewJoke} />
       </div>
     );
   }

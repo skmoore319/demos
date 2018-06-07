@@ -12,6 +12,8 @@ import { store } from './Store';
 import { ClickerContainer } from './components/clicker/clicker.container';
 import { SignInContainer } from './components/sign-in/sign-in.container';
 import { MovieTableContainer } from './components/movies-table/movies.container';
+import { ChuckNorrisContainer } from './components/chuck-norris/chuck-norris.container';
+import { NestedComponent } from './components/nested/nested.component';
 
 class App extends React.Component<any, any> {
 
@@ -28,6 +30,8 @@ class App extends React.Component<any, any> {
               <Route path="/tic-tac-toe" component={TicTacToeContainer} />
               <Route path="/sign-in" component={SignInContainer} />
               <Route path="/movies" component={MovieTableContainer} />
+              <Route path="/chuck-norris" component={ChuckNorrisContainer} />
+              <Route path="/nested" component={NestedComponent} />
               <Route component={FirstComponent} />
             </Switch>
           </div>
