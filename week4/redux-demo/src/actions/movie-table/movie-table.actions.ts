@@ -1,4 +1,5 @@
 import { movieTableTypes } from "./movie-table.types";
+import { environment } from "../../environment";
 
 
 export const updateYear = (year: number) => {
@@ -11,7 +12,7 @@ export const updateYear = (year: number) => {
 }
 
 export const updateMovies = (year: number) => (dispatch: any) => {
-  fetch('http://localhost:3001/movies/year/' + year, {credentials: 'include'})
+  fetch(environment.context + 'movies/year/' + year, {credentials: 'include'})
     .then(resp => {
       console.log(resp.status)
       if(resp.status === 401 || resp.status === 403) {
