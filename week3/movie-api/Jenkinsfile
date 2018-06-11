@@ -10,6 +10,7 @@ pipeline {
         AWS_ACCESS_KEY = "${AWS_ACCESS_KEY}"
         AWS_SECRET_ACCESS_KEY = "${AWS_SECRET_ACCESS_KEY}"
         MOVIE_API_STAGE = "${MOVIE_API_STAGE}"
+        DEMO_APP_URL = "${DEMO_APP_URL}"
     }
     
     stages {

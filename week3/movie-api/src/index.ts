@@ -39,7 +39,7 @@ app.use(bodyParser.json());
 // allow cross origins
 app.use((req, resp, next) => {
   (process.env.MOVIE_API_STAGE === 'prod')
-    ? resp.header('Access-Control-Allow-Origin', 'http://ec2-18-237-118-203.us-west-2.compute.amazonaws.com:3001')
+    ? resp.header('Access-Control-Allow-Origin', process.env.DEMO_APP_URL)
     : resp.header('Access-Control-Allow-Origin', 'http://localhost:9001');
   resp.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   resp.header('Access-Control-Allow-Credentials', 'true');
