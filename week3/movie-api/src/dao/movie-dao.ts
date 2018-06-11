@@ -5,6 +5,7 @@ const awsConfig: ConfigurationOptions = {
   accessKeyId: process.env.AWS_ACCESS_KEY,
   secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
 };
+console.log(awsConfig);
 
 aws.config.update(awsConfig);
 
@@ -59,6 +60,8 @@ export function findAllByYear(year: number): Promise<any> {
 }
 
 export function findByYearAndTitle(year: number, title: string): Promise<any> {
+  console.log(`finding movie with title: ${title}
+  and year: ${year}`);
   return docClient.get({
     TableName: 'movies',
     Key: {
