@@ -5,6 +5,7 @@
   "main": "index.ts",
   "scripts": {
     "start": "nodemon --exec ts-node src/index.ts",
+    "deploy": "ts-node src/index.ts",
     "lint": "tslint --project ."
   },
   "author": "blake",
@@ -13,10 +14,12 @@
     "aws-sdk": "^2.248.1",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
-    "express-session": "^1.15.6"
+    "express-session": "^1.15.6",
+    "ts-node": "^6.1.0"
   },
   "devDependencies": {
     "@types/express": "^4.11.1",
-    "@types/express-session": "^1.15.9"
+    "@types/express-session": "^1.15.9",
+    "tslint": "^5.10.0"
   }
 }
