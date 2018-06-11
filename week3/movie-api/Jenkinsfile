@@ -9,6 +9,7 @@ pipeline {
         JENKINS_NODE_COOKIE = 'dontkill'
         AWS_ACCESS_KEY = "${AWS_ACCESS_KEY}"
         AWS_SECRET_ACCESS_KEY = "${AWS_SECRET_ACCESS_KEY}"
+        MOVIE_API_STAGE = "${MOVIE_API_STAGE}"
     }
     
     stages {
