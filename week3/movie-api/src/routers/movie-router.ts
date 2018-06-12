@@ -10,6 +10,7 @@ movieRouter.get('/title/:title/year/:year', (req, resp) => {
       resp.json(data.Item);
     })
     .catch(err => {
+      console.log(err);
       resp.sendStatus(500);
     });
 });
