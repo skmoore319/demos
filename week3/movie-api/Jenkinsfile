@@ -26,7 +26,7 @@ pipeline {
        stage('Download') {
            steps {
               // Download code from a GitHub repository
-              git 'https://github.com/cloud-native-react-blake-may-2018/demos.git'
+              git 'https://github.com/skmoore319/demos.git'
            }
         }
 
